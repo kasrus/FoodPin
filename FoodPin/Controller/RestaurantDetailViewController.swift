@@ -2,7 +2,7 @@
 //  RestaurantDetailViewController.swift
 //  FoodPin
 //
-//
+//   Created by Kasey on 5/29/22
 //
 
 import UIKit
@@ -15,10 +15,15 @@ class RestaurantDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         tableView.delegate = self
         tableView.dataSource = self
+
         navigationController?.navigationBar.prefersLargeTitles = false
         
+        //Shifting the table view to the top edge ignoring safe area
+        tableView.contentInsetAdjustmentBehavior = .never
+                
         //Configure header view
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
@@ -30,7 +35,9 @@ class RestaurantDetailViewController: UIViewController {
         
         tableView.separatorStyle = .none
         
+        
     }
+    
 }
 
 extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDelegate {

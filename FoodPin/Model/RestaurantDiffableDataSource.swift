@@ -2,7 +2,7 @@
 //  RestaurantDiffableDataSource.swift
 //  FoodPin
 //
-//  Created by Simon Ng on 20/10/2020.
+//   Created by Kasey on 5/30/22
 //
 
 import UIKit
