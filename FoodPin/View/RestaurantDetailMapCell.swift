@@ -1,19 +1,23 @@
 //
-//  RestaurantDetailTextCellTableViewCell.swift
+//  RestaurantDetailMapCellTableViewCell.swift
 //  FoodPin
 //
-//  Created by Kasey on 5/29/22.
+//  Created by Kasey on 6/7/22.
 //
 
 import UIKit
+import MapKit
 
-class RestaurantDetailTextCell: UITableViewCell {
-    @IBOutlet var descriptionLabel: UILabel! {
+class RestaurantDetailMapCell: UITableViewCell {
+
+    @IBOutlet var mapView: MKMapView! {
         didSet {
-            descriptionLabel.numberOfLines = 0
-            descriptionLabel.adjustsFontForContentSizeCategory = true
+            mapView.layer.cornerRadius = 20.0
+            mapView.clipsToBounds = true
+
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
